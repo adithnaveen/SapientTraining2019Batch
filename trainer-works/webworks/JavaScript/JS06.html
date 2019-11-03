@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+        function fnArrayOpr(){
+            arr = new Array(5); 
+            arr[0] = 10; 
+            arr[1] = 20; 
+            arr[2] = 30; 
+            arr[3] = 40; 
+            arr[4] = 50; 
+
+            console.log("Number  of Elements in Array " + arr.length);
+            console.log("Array content" + arr);
+            
+            // keep the data at the end 
+            arr.push(100); 
+            console.log("Array content - After pushing 100 " + arr);
+            
+            arr.pop(); 
+            console.log("Array content AFter Pop " + arr);
+            
+            arr.unshift(500); 
+            console.log("Array content after unshift " + arr);
+            arr.shift(); 
+            console.log("Array content after shift " + arr);
+            
+            // splice 
+            arr.splice(1,0, 1000, 2000, 3000); 
+            console.log("After splice 1,1 [" + arr +"]");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="fnArrayOpr()">Click Me 1</button>
+</body>
+</html> 

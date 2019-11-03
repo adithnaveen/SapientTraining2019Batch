@@ -1,0 +1,56 @@
+function f1  (){
+
+        setTimeout(() => {
+            let { pageNum = 1, pageSize = 10 } = options;
+
+            if (typeof pageNum !== 'number' || typeof pageSize !== 'number') {
+                let err = { code: 1003, message: "Please enter PageNum and Page Size as number" };
+                callBackFn(err);
+                return;
+            }
+
+            // since arrars start from '0'
+            let begin = (pageNum - 1) * pageSize;
+            let end = begin + pageSize;
+
+            let newData = data.slice(begin, end);
+            callBackFn(null, newData);
+		},0); 
+}
+	   
+	  
+f1() -> 
+
+
+
+while(true){
+	printf("hi"); 
+}
+
+until(true){
+	printf("hi"); 
+}
+
+
+db.emps.insert({
+"firstname" : "Naveen", "email" : "naveen@naveen.com", "phone" : "+91 9090909", "city" : "bengaluru" });
+
+
+
+"5d51999826eaf744d0535d9d"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

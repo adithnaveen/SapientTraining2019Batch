@@ -1,0 +1,54 @@
+select emp_id , emp_name , emp_email, emp_dob , department_id, salary from employee where emp_id=?; 
+
+
+java (sun microsystems code) 
+
+interface Runnable {
+	public void run(); 
+
+	}
+
+Thread t = new Runnable(
+	public void run(){
+		syso("something here "); 
+	});
+	
+Thread t = ()->{
+	Syso("Some thing here "); 
+	}
+	
+interface Maths{
+	public int add(int a, int b); 
+}
+
+class MyBusines{
+	public void add(int a, int b){
+		Maths m = (a, b) -> {return a+b;}
+	}
+}
+
+
+create a class class device with 
+	dId, name, price, category 
+	
+1. list products price greater than 1000 
+2. list products of electronics type 
+3. list products of electronics and price greater than 350
+	
+	
+	
+select deptid, location, sum(sal) from employee 
+	group by deptid; 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

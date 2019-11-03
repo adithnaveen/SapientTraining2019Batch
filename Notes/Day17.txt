@@ -1,0 +1,115 @@
+https://github.com/adithnaveen
+
+
+class User {
+	userId; 
+	name 
+	Address address; 
+}
+
+class Address{
+	stNo; 
+	city; 
+	state; 
+	country; 
+	}
+	
+Java - Spring Boot
+		MongoDB 
+		documentation Swagger 
+		Netflix API 
+			Spring Cloud 
+			ZUUL - 
+			Routing is an integral part of a microservice architecture. For example, / may be mapped to your web application, /api/users is mapped to the user service and /api/shop is mapped to the shop service. Zuul is a JVM-based router and server-side load balancer from Netflix.
+
+				Netflix uses Zuul for the following:
+
+				Authentication
+				Insights
+				Stress Testing
+				Canary Testing
+				Dynamic Routing
+				Service Migration
+				Load Shedding
+				Security
+				Static Response handling
+				Active/Active traffic management
+			Eureka 
+			Feign 
+			Zipkin 
+			Ribbon 
+			Hystrix 
+		Testing 
+			jMeter (Whit Box ) 
+			Selenium (Black Box) 
+		BDD 
+			Cucumber 
+		Code Coverage 
+			Sonar 
+		Deployment 
+			Jenkins 
+		Mocking 
+			Mockito 
+		Caching 
+			Redis 
+		Cloud Deployment
+			AWS 
+		UI 
+			React / Redux 
+		Container Management 
+			Docker 
+		Logger 
+			util / log4j / slf4j 
+		code repository 
+			Bit Bucket 
+		Sroties 
+			Jira 
+	
+NFR 
+	<3 ms 
+	bulk 10000 request to be in 1 sec 
+	
+	
+
+	
+	
+	
+Get All - http://localhost:9090/db/users 
+Get One - http://localhost:9090/db/users/{id}	
+Post - http://localhost:9090/db/users 
+Put - http://localhost:9090/db/users
+Delete - http://localhost:9090/db/users/{id}
+
+to get users who are more than given age 
+Get with Condition - http://localhost:9090/db/users/age/{age}
+
+	
+
+	
+	
+	db.emps.find({age:10}); 
+	db.emps.find({age:{$gt:?0}}); 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,8 +1,0 @@
-This is a test file by Vinod.
-
-my email is vinod@vinod.co
-and my phone is 9731424784.
-
-public static void main(){
-  Some code... 
-}

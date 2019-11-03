@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <script type="text/javascript">
+        function getDomElements() {
+            para = document.getElementsByTagName("p")[0]
+            console.log(para);
+
+            scriptTag = document.getElementsByTagName("script")[0];
+
+            console.log(scriptTag);
+
+        }
+
+        function fnShowColor() {
+            var __body = document.body;
+            console.log("Number of attributes on body is " +
+                __body.attributes.length);
+
+
+            // getting all the attributes 
+
+            for (i = 0; i < __body.attributes.length; i++) {
+                console.log(__body.attributes[i]);
+            }
+
+            // or 
+            console.log("From GetAttribute Property : "+
+                __body.getAttribute("bgcolor"));
+
+        }
+
+        function fnSetBGColor(color) {
+            document.body.setAttribute("bgcolor", color);
+        }
+
+        function fnManipulateDom(){
+            __ePara = document.getElementsByTagName('p')[0]; 
+            
+            // <b></b>
+            _para = document.createElement("b"); 
+            // Hello I'm from JS
+            _myText = document.createTextNode("Hello I'm from JS"); 
+            
+            // <b>Hello I'm from JS</b>
+            _para.appendChild(_myText); 
+
+           //  document.body.replaceChild(_para, __ePara); 
+            document.body.insertBefore(_para, __ePara); 
+            console.log(__ePara);
+            
+
+        }
+
+
+
+    </script>
+</head>
+
+<body bgcolor="cyan">
+    <p>My First Para</p>
+    <button onclick="getDomElements()">getDomElements</button>
+    <hr />
+    <button onclick="fnShowColor()">Show Color</button>
+    <hr />
+
+    <button onclick="fnSetBGColor('blue')">Blue</button>
+    <button onclick="fnSetBGColor('red')">Red</button>
+    <button onclick="fnSetBGColor('cyan')">Cyan</button>
+    <button onclick="fnSetBGColor('orange')">Orange</button>
+    <hr /> 
+    <button onclick="fnManipulateDom()">fnManipulateDom</button>
+
+</body>
+
+</html>

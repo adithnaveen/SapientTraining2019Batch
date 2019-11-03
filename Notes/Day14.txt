@@ -1,0 +1,41 @@
+<servlet>
+	<servlet-name>company</servlet-name>
+	<servlet-class>org.spring.xxx.xxx.DispatcherServlet</servlet-class>
+</servlet>
+
+
+<servlet-mapping>
+	<servlet-name>company</servlet-name>
+	</url-pattern>/*</url-pattern>
+</servlet-mapping>
+
+
+@Controller
+class MyController{
+	public String sayHi(){
+		return "hello"; 
+	}
+}
+
+
+http://localhost:8080/SpringMVCWorks/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

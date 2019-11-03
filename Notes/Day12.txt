@@ -1,0 +1,203 @@
+adapter pattersn
+
+
+interface TescoStandards{
+	public void one(); 
+	public void two(); 
+	public void three(); 
+	public void four(); 
+	public void five(); 
+	public void six(); 
+}
+
+class Adapter implements TescoStandards{
+	public void one(){}
+	public void two(){}
+	public void three(){} 
+	public void four(){}
+	public void five(){}
+	public void six(){}
+ }
+
+class Project1 extends  Adapter {
+
+}
+class Project2 extends  Adapter {
+public void one(){} 
+}
+class Project3 extends  Adapter {
+ 	public void two(){}
+	 
+}
+class Project4 extends  Adapter {
+public void one(){
+	// todo 
+}
+	 
+	public void six(){}
+}
+
+
+
+
+class Customer{
+	private int cId; 
+	private Name name; 
+	private double income; 
+}
+
+class Employee{
+	private int empId; 
+	private Name name; 
+	private double salary; 
+}
+
+class Trainee {
+	private int tId; 
+	private Name name; 
+	private int marks; 
+}
+
+class Name {
+	private String firstName; 
+	private String lastName; 
+}
+
+
+
+Sourajit - 3
+Himanshu - 4
+Praneeth - 5
+Anjani - 5
+Chris - 3
+Umang - 6
+Mayur -  5
+Abhilash - 5
+Udit - 6
+Sandeep  - 4
+Anurag - 8
+Shashank - 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class EmployeeDao {
+	List<Employee> getAllRecords(){
+		// todo 
+	}
+}
+class Employee{
+	private int empId; 
+	private String empName; 
+}
+
+class Proxyemployee {
+	private Employee emp; 
+	private String first3Chars; 
+}
+class EmployeeProxyService{
+	
+	List<ProxyEmployee> getAllRecords(){
+		List<Employee> list = new EmployeeDao().getAllRecords(); 
+		
+		List<ProxyEmployee> newList = new ArrayList<>(); 
+		for(Employee temp : list ){
+			ProxyEmployee p = new ProxyEmployee (temp temp.getEmpName().substr(0,3)); 
+				
+			newList.add(p); 
+					
+		}
+		
+		return newList; 
+	}
+}
+
+
+101,"harry', 1212
+String str[]  = new String[args.length]; 
+for(int i=0; i<args.length; i++){
+	str[i] = args[i]; 
+}
+
+Employee e = new Employee(Integer.parseInt(str[0]), str[1],??) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class LoginValidate extends HttpServerlt{
+	public void doGet(HttpServletRequest req, HttpServeltResponse 
+			res){
+	
+		LoginDao dao = new LoginDao(); 
+		
+		dao.validate(getLoginObject(req)) { 
+			
+	}
+	
+	public static  Login getLoginObject(HttpServletRequest req){
+		Login login  = new Login(req.getParameter("uname"), 
+					req.getParameter("password")); 
+					
+			return login; 
+	}
+}
+
+
+class Login{
+	private String userName; 
+	private String password; 
+}
+
+
+
+
+
+github.com/adithnaveen
+
+factory pattern 
+
+// we should stop this 
+Car C = Car.getMyCar("ford"); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

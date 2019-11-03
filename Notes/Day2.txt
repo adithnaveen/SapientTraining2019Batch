@@ -1,0 +1,13 @@
+PJBA-Java-Week1-SmartCoffeeMachine - 3 
+	
+PJBA-Java-Week1-SettleUp - 2
+PJBA-Java-Week1-Shopping
+PJBA-Java-Week1-College
+PJBA-Java-Week1-Renting 
+
+
+
+PJBA-Java-Week2-SmartCoffe
+PJBA-Java-Week3-SmartCoffe
+PJBA-Java-Week4-SmartCoffe
+PJBA-Java-Week5-SmartCoffe

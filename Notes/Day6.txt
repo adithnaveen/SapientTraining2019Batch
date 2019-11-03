@@ -1,0 +1,136 @@
+connect to DB 
+
+> show databases;
+> create database sapientdb; 
+> use sapientdb;  -- switch to db 
+> show databases; 
+
+> create table employee(
+	emp_id int primary key, 
+	emp_name varchar(30) not null, 
+	emp_email varchar(50) not null, 
+	emp_dob date
+);
+
+>  show tables;
+> show create table employee; 
+output 
+ employee | CREATE TABLE `employee` (
+  `emp_id` int(11) NOT NULL,
+  `emp_name` varchar(30) NOT NULL,
+  `emp_email` varchar(50) NOT NULL,
+  `emp_dob` date DEFAULT NULL,
+  PRIMARY KEY (`emp_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
+
+
+>mysqlshow --verbose -u root -p
+>mysqlshow -k sapientdb -u root -p
+>mysqlshow -k sapientdb employee  -u root -p
+
+
+update 
+> update employee set emp_email ='himanshu@ps.com' where emp_id=14; 
+
+
+> update employee set emp_email ='himanshu@ps.com', emp_dob='1991-11-21' where emp_id=14;
+
+> delete from employee where emp_id=160;
+
+> create table dept(
+	dept_id int primary key, 
+	dept_name varchar(30) not null, 
+	dept_loc varchar(40) not null); 
+
+> insert into dept values(10, 'Accounts', 'BENGALURU'); 
+
+> insert into dept values(20, 'Finanace', 'MYSURU'); 
+
+> insert into dept values(30, 'Developement', 'NEW YORK'); 
+
+> SHOW STATUS LIKE 'Con%';
+> show processlist;
+
+max used connections 
+> SHOW STATUS LIKE '%max%';
+
+
+> alter table employee add department_id  int; 
+
+
+> alter table employee add foreign key (department_id) references dept(dept_id); 
+
+
+joins, between 2 tables 
+employee
+	emp_id, emp_name, emp_email, dept_loc, 
+		dept_name
+	
+select 
+	e.emp_id, e.emp_name, e.emp_email, 
+	d.dept_loc, d.dept_name
+	from employee e, dept d
+	where e.department_id = d.dept_id
+	order by e.emp_name desc; 
+	
+	
+> alter table employee add salary decimal(4,2); 
+
+> alter table employee modify salary decimal(9,2); 
+		
+> update employee set salary = department_id * 10000;		
+		
+-- aggregation 
+
+syntax for any sql statement 
+
+select [*], [column1, column2...column n]
+	from table[s], 
+	[where  <condition> ] 
+	[group by fields]
+	[having <condition>]
+	[order by asc | desc ]; 
+	
+> select department_id, count(emp_id),
+	sum(salary), avg(salary) from 
+	employee 
+	group by department_id; 
+		
+-- to find the average salary paid to 
+-- paid to 	accounts dept 
+
+explain select avg(e.salary), count(*) from 
+	employee e, dept d 
+	where d.dept_name = 'Accounts' 
+	and d.dept_id = e.department_id
+	group by d.dept_id; 
+		
+		
+		
+		
+> select * from employee where salary is null;		
+		
+> select emp_name, if(salary is null, 10000, salary)from employee;
+	
+> select emp_name, if(salary is null, 10000, salary) as "Salary" from employee;	
+		
+> select emp_name, ifnull(salary, 10000)
+	from employee; 
+
+
+
+https://bit.ly/2O61MSn
+	
+an entity in DB is called Bean in java 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,13 @@
+<% scriptlet %>  - for every request 
+
+
+declaration (one time ) 
+<%! -- code %> 
+
+Expressions (in expressions there is no ; ) 
+
+<%= variable %> 
+
+
+<%@ directive %> 
+select emp_id , emp_name , emp_email, emp_dob   department_id, salary  from employee

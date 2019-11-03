@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript">
+        function checkAge() {
+            name = prompt("Enter Your Name")
+            age = prompt("Enter Your Age", 18);
+
+            message = "";
+            if (age > 18) {
+                message = "<H1>You are eligible to vote</h1>";
+            } else {
+                message = "<h2>sorry Please wait for " + (18 - age) + " years </h2>";
+            }
+
+            document.getElementById("message").innerHTML = message;
+        }
+
+        function sumOfNumbers() {
+            var x;
+            var result = 0;
+
+            do {
+                x = parseInt(prompt("Enter a number ", 0));
+                result = result + x;
+            } while (x);
+
+            console.log("Sum of numbers  " + result);
+        }
+
+
+        function display(){
+            console.log("hi i'm from display without param ");
+            noOfParams = display.arguments.length; 
+            console.log("You Passed " + noOfParams);
+
+            for(i=0; i<display.arguments.length; i++){
+                console.log(display.arguments[i]);
+           }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="checkAge()">Click To Vote</button>
+    <div id="message"></div>
+    <hr />
+    <button onclick="sumOfNumbers()">Calc Sum</button>
+    <hr />
+    <button onclick="display('one', 'two', 'three')">Display</button>
+</body>
+
+</html>

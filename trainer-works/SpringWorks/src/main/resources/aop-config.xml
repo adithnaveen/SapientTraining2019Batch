@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/aop 
+http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+	<aop:aspectj-autoproxy />
+
+<!-- this tag will have the class information only not id 
+because we are not invoking, and we informing spring  -->
+
+
+
+	<bean class="training.sapient.aop.model.LogingAspect" />
+	<bean class="training.sapient.aop.model.LogingAspectAfter" />
+
+
+
+
+
+	<bean id="account1" class="training.sapient.aop.model.Account">
+		<property name="accNo" value="101"/>
+		<property name="accName" value="Kumar"/>
+		<property name="balance" value="10000"/>
+	</bean>
+
+	<bean id="account2" class="training.sapient.aop.model.Account">
+		<property name="accNo" value="102"/>
+		<property name="accName" value="Kanchan"/>
+		<property name="balance" value="20000"/>
+	</bean>
+	
+	
+	<bean id="sbAccount" class="training.sapient.aop.model.SBAccount">
+		<property name="account" ref="account1"/>
+	</bean>
+	
+	<bean id="caAccount" class="training.sapient.aop.model.CAAccount">
+		<property name="account" ref="account2"/>
+	</bean>
+	
+	<bean id="banking" class="training.sapient.aop.model.BankService" autowire="byName" />
+	
+	
+
+</beans>
+
+
+
+

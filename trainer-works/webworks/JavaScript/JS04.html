@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+        num1 = 100; 
+        function fn1(){
+            // if you prefix the variable declaration a var then the variable 
+            // is available only in the function 
+         //    var num2 = 200; 
+            num3 = 300; 
+        }    
+
+        function fn2(){
+            console.log("Value of  num1 " + num1 );
+            // console.log("Value of  num2 " + num2 );
+            console.log("Value of  num3 " + num3 );
+        }
+
+    </script>
+    
+</head>
+<body>
+    <script type="text/javascript">
+            console.log("Value of  num1 " + num1 );
+            fn1();
+            fn2(); 
+            // console.log("Value of  num2 " + num2 );
+            console.log("Value of  num3 " + num3 );
+    </script>
+</body>
+</html>

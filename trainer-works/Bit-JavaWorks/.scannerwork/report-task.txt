@@ -1,0 +1,6 @@
+projectKey=MY_SECOND_PRJ_SCNNED
+serverUrl=http://localhost:9000
+serverVersion=7.9.1.27448
+dashboardUrl=http://localhost:9000/dashboard?id=MY_SECOND_PRJ_SCNNED
+ceTaskId=AWxwbEuRyV4aA7n3yQjh
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWxwbEuRyV4aA7n3yQjh

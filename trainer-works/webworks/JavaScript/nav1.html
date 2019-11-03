@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+        function ask(){
+            var arr = new Array("images/mickey.jpg", "images/minnie.jpg",
+             "images/tomandjerry.jpg"); 
+            var choice = prompt("Enter 1. Mickey\n2. Minne\n3. TomAndJerry"); 
+            if(choice.match(/[1-3]/)!=choice){
+                alert("Sorry Invalid Number Try again")
+            }else {
+                changeImage(arr[parseInt(choice-1)]); 
+            }
+        }
+        function changeImage(image){
+            parent.content.location.href=image;
+        }
+    </script>
+
+</head>
+<body onload="ask()">
+    <button onclick="ask()">Click</button>
+</body>
+</html>

@@ -1,0 +1,49 @@
+package training.sapient.pmsbasicscategory;
+
+public class Category {
+	private int categoryId;
+	private String categoryName;
+
+	private Product product;
+
+	public Category() {
+	}
+
+	public int getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
+	}
+
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+
+	public Category(int categoryId, String categoryName) {
+		super();
+		this.categoryId = categoryId;
+		this.categoryName = categoryName;
+	}
+
+	public Category(int categoryId, String categoryName, Product product) {
+		super();
+		this.categoryId = categoryId;
+		this.categoryName = categoryName;
+		this.product = product;
+	}
+
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
+}

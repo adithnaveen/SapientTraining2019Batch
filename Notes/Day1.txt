@@ -1,0 +1,126 @@
+int main(){
+	printf("hi"); 
+}
+
+
+void  main(){
+	printf("hi"); 
+}
+
+
+int main(){
+	int x; 
+	print("Enter a number" ); 
+	scanf("%d", &x); 
+}
+
+
+
+
+Oops 
+
+Encapsulation
+Abstraction 
+Polymorphism 
+Inheritance 
+
+static 
+
+
+\\10.150.222.114
+
+
+Salary 
+Salary_Offshore
+Salary_onsite_US
+Salary_onsite_USA_client 
+
+
+
+
+com
+	onsite
+		usa
+			Salary
+		germeny
+			Salary
+		france
+			Salary
+		
+	offshore
+		delhi
+			Salary
+		kolkota
+			Salary
+
+
+
+import com.onsite.usa.Salary; 
+
+Salary s = new Salary(); 
+
+
+
+variable -> camel case 
+	empId, empSal 
+	
+methods -> camel case 
+	shareEmployeeSalary() 
+	
+Class -> pascal case 
+	EmployeeManagement 
+
+constanct -> upper case	
+	MAX_NUMBER_OF_EMPLOYEE
+	
+packages 
+	lower case 
+
+
+	
+	
+	
+class Employee{} -> 
+
+
+class Employee extends Object {} 
+	
+	
+	
+	
+	
+class Object {
+	// methods 
+}	
+	
+class Employee{
+	Employee() {super();}
+	
+	}
+	
+	
+	
+
+	
+	+ , -, *, /, % 
+	instanceof 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+

@@ -1,0 +1,46 @@
+// to know which branch you are on 
+> git branch 
+
+// to create branch 
+> git branch newbranch
+
+// to make newbranch active 
+> git checkout newbranch
+
+// to check 
+// git branch
+
+// now all the changes are on new branch 
+// git add . 
+// git commit -m "new comment" 
+
+// checkout master branch 
+> git checkout master 
+
+// to check 
+> git branch 
+
+// merge two branches 
+// into master 
+// checkout master 
+> git checkout master 
+
+> git merge newbranch
+
+
+// below command will push master
+> git push 
+
+// to push the branch 
+>git checkout newbranch 
+
+// git will auto suggest first time, when you give the command as git push as below   
+git push --set-upstream origin newbranch, 
+> git push 
+
+
+
+
+
+
+

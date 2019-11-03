@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript">
+        function setCookie() {
+           var name = document.myform.uname.value
+
+            dt = new Date(); 
+            // add 1 day for existing date 
+            dt.setDate(dt.getDate()+1); 
+
+            document.cookie="path=/:uname="+ name+":expires="+ dt.toGMTString(); 
+            console.log("Cookie set");
+        }
+
+        function checkCookie(){
+            cookieValue = getCookie('uname'); 
+
+            if(cookieValue != null || cookieValue!=""){
+                return cookieValue; 
+            }else {
+                return "no cookie found"; 
+            }
+        }
+
+        function getCookie(name){
+            console.log("cookie length " +document.cookie.length);
+            
+            
+            if(document.cookie.length>0){
+                __nameIndex = document.cookie.indexOf(name);
+                __endIndex = name.length + 1; 
+                // uname=Kumar;date=12-12-12
+                __semicolonPosition = document.cookie.indexOf(";"); 
+                console.log(__semicolonPosition);
+                
+
+            }
+        }
+
+
+    </script>
+</head>
+
+<body onload="checkCookie()">
+    <form name="myform">
+        <input type="text" name="uname" />
+        
+        <input type="button" value="Click" onclick="setCookie()">
+    </form>
+</body>
+
+</html>

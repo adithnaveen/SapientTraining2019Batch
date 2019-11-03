@@ -1,0 +1,42 @@
+p {
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+}
+
+h1,h2 {
+    font-style: italic;
+    font-size: 3em;
+    text-align: center; 
+    color: wheat; 
+}
+
+.myh2{
+    font-size: 2em;
+}
+
+#myFirstId{
+    color:aqua; 
+}
+
+a:hover{
+    font-style: italic; 
+    font-family: 'Courier New', Courier, monospace; 
+    color: blueviolet; 
+}
+
+a:link{
+    color: black; 
+
+}
+a:visited{
+    color: black; 
+}
+
+table{
+    border: 3px dashed; 
+}
+
+td{
+    border: 2px solid orange; 
+}

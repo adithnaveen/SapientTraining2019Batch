@@ -1,0 +1,240 @@
+{
+	empid:101, 
+	empsal:232323, 
+	empname: {
+		firstName : "harry", 
+		lastName: "barry"
+	}, 
+	project:{
+		projectid:"p101", 
+		projecttitle : "Testing", 
+		projectlocation:"Blr"
+	}, 
+	insurance :{
+		insid : "ins123"
+		 
+	}
+}
+
+
+> show dbs 
+>db 
+> use sapeintdb (to use or create the DB) 
+> db.emps.insert({empid:101, empname:"Naveen", contact:"+91 9900524255", email:"adith.naveen@gmail.com"})
+
+ db.emps.insert({empid:102, empname:"Sandeep", contact:"+91 338883333", email:"sandeep@gmail.com"})
+
+ db.emps.insert({empname:"Udit", contact:"+91 67867878", email:"praneeth@gmail.com"})
+
+ db.emps.insert({empid:105, empname:"Anurag", contact:"+91 9876543211", email:"anurag@gmail.com"})
+ 
+ >mongoexport --db sapientdb --collection newemps -o expemps.json --fields "first_name,email"
+
+
+
+
+var itr:db.emps.find(); 
+
+while(itr.hasNext()){
+	var temp:itr.next(); 
+	print(temp.empname.toUpperCase()); 
+}
+
+write a program to create a new collection and empname, salary, HRA from the existing emps collection and when empname is stored it should be in uppercase. And HRA is 30% of the salary. 
+
+
+> db.createCollection("capColl", {capped:true, autoIndexID:true, max:5}); 
+
+
+db.capColl.insert({food:"Idly", review:1}); 
+
+db.capColl.insert({food:"Biriyani", review:2}); 
+
+db.capColl.insert({food:"Burger", review:3}); 
+
+db.capColl.insert({food:"Dosa", review:4}); 
+
+db.capColl.insert({food:"Samosa", review:5}); 
+
+
+db.capColl.insert({food:"Pizza", review:4.4}); 
+
+
+
+> db.emps.find({empid:101}); 
+> db.emps.find({empid:101}, {empid:1, empname:1, _id:0}); 
+
+> db.emps.find({empid:{$gt:101}}, {empid:1, empname:1, _id:0}); 
+
+
+> db.emps.find({empid:{$exists:false}});
+
+>db.newemps.find().sort({id:1}).skip(5).limit(5);
+
+
+
+> db.newemps.find().sort({first_name:1, last_name:-1}).skip(5).limit(5);
+
+-- gender Female and id > 500 
+-- and caluse 
+db.newemps.find({gender:'Female', id:{$gt:500}}).count(); 
+
+-- or caluse 
+db.newemps.find({$or : [
+	{gender:'Female'}, 
+	{id:{$gt:500}}
+]}).count();
+
+db.embedded.insert({
+	empid:101, 
+	empname:"Kanchan", 
+	empsal:3030, 
+	address: {
+		houseNo: 123, 
+		street: "Stevens Creek Blvd", 
+		city: "Reston", 
+		state: "Virginia"
+	}, 
+	contact: {
+		personal:{
+			email:"kanchan.nav@gmail.com", 
+			phone: "101010101"
+		}, 
+		official: {
+			email:"kanchan@example.com", 
+			phone:"1231231231"
+		}
+	}
+})
+
+
+
+
+
+
+db.embedded.insert({
+	empid:105, 
+	empname:"Anurag", 
+	empsal:5678, 
+	address: {
+		houseNo: 321, 
+		street: "Southway Dream Way", 
+		city: "Herndon", 
+		state: "Virginia"
+	}, 
+	contact: {
+		personal:{
+			email:"anurag@gmail.com", 
+			phone: "556655665"
+		}, 
+		official: {
+			email:"anurag@example.com", 
+			phone:"9900889900"
+		}
+	}
+})
+
+
+db.embedded.find({"address.state":"Virginia"}, {empname:1, empsal:1, _id:0, "contact.personal.email":1}); 
+
+
+
+db.ratings.insert({name:"mouse", ratings:[5,6,7]});
+db.ratings.insert({name:"key board", ratings:[5]});
+db.ratings.insert({name:"monitor", ratings:[8,9,10]});
+db.ratings.insert({name:"laptop", ratings:[1,2,3]});
+db.ratings.insert({name:"watch", ratings:[7,8]});
+
+
+-- exact match 
+db.ratings.find({ratings: [5]})
+db.ratings.find({ratings: [1,2,3]})
+
+-- any where match 
+db.ratings.find({ratings: 5})
+
+-- positional match 
+db.ratings.find({"ratings.1": 6})
+
+-- conditional 
+db.ratings.find({"ratings": {$elemMatch:{$gt: 7}}}); 
+
+
+-- update 
+-- this will update 1 record 
+db.emps.update({}, {$set:{city:'Bengaluru'}})
+
+-- multiple 
+
+db.emps.update({}, {$set:{city:'Bengaluru'}}, {multi :true})
+
+
+
+db.emps.update({empname:'Udit'}, {$set:{empid:110}}, {multi :true})
+
+
+
+
+db.emps.update({empname:'Udit'}, {$set:{country:"India", salary:1234}}, {multi :true})
+
+write a query to update the salary in the collection emps 
+provided if the salary field is not there. The salary shall be 100 * empid 
+
+
+db.emps.update({empname:"Steve"}, {$set:{country:"India", salary:1234}}, 
+{upsert: true});
+
+
+
+db.emps.save({"_id" : ObjectId("5d43fcdc988be0bbe66f2a33"), empname:"Shashank", city:"Chennai"}); 
+
+
+
+db.emps.save({"_id" : 1, empname:"Shashank", city:"Chennai"}); 
+
+
+db.emps.showIndexes(); 
+
+db.emps.find().explain("executionStats");
+
+
+
+ db.emps.find({empid:{$gt:101}}, {empid:1, empname:1, _id:0}).explain("executionStats"); 
+
+
+
+db.emps.createIndex({empid: 1}); 
+
+ db.emps.find({empid:{$gt:101}}, {empid:1, empname:1, _id:0}); 
+ 
+ 
+ 
+for(i=0; i<100000;i++){
+	db.mynumbers.insert({num:i, name:"dummy"}); 
+}
+
+
+
+
+var itr=db.emps.find({salary:{$exists:false}}); 
+
+while(itr.hasNext()){
+	var temp=itr.next(); 
+	db.emps.update({salary:{$exists:false}}, {$set:{salary: temp.empid *100}})
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

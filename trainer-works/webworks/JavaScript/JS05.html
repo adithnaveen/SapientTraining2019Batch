@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript">
+        function Employee(empId, empName) {
+            this.empId = empId;
+            this.empName = empName;
+
+            this.insideFunction = () => {
+                console.log("Invoking from Inside Function");
+                console.log("Emp Id " + this.empId + ", Emp Name " + this.empName);
+                myPrivateFunction(); 
+            }
+
+
+            var myPrivateFunction  = () => {
+                console.log("My Private Function ");
+                console.log("Emp Id " + this.empId + ", Emp Name " + this.empName);
+            }
+        }
+
+        Employee.prototype.display = function () {
+            console.log("Emp Id " + this.empId + ", Emp Name " + this.empName);
+        }
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        emp = new Employee(101, "Harry");
+        emp.insideFunction() ;
+    </script>
+</body>
+
+</html>

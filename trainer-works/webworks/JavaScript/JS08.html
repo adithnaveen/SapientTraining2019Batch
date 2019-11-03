@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript">
+        function fnImplicitFunction() {
+            var str = "Hindustan";
+
+            console.log(str.length);
+            console.log(str.indexOf("n")) // -> 2 
+            console.log(str.indexOf("n", 3));//  -> 8 
+            console.log(str.lastIndexOf("n")); // -> 8 
+            console.log(str.substring(1, 4));  // -> ind 
+            console.log(str.substr(1, 4)); // -> indu
+            console.log(str.charAt(2));
+
+            document.write("yahoo".link("http://www.yahoo.com") + "<br />");
+            document.write("h" + "2".sub() + "o");
+            // document.write("hello this is for <br />  testing "); 
+
+            // alert("hello this is for \n  testing "); 
+
+            confirm("just confirming ")
+        }
+
+
+        function fnRegExp() {
+            var num1 = "0123489893";
+            var regExp1 = /0[0-7]+/;
+
+            console.log(num1.match(regExp1));
+
+            // 192.12.33.44
+            var regExForIP = /\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}/;
+            var ipAddress = "123.456.33.22.667.99";
+
+            console.log(ipAddress.match(regExForIP));
+
+            // entering amount 
+            amount = prompt("Enter the amount ", "Please prefix only with +-");
+            /* 
+            if(amount.match(/[+-]?\d+/) == amount){
+                alert("Valid Amount ")
+            }else {
+                alert("Sorry invalid Amount ")
+            }
+ */
+            // verstion 2.0 
+
+            alert(amount.match(/[+-]?\d+/) == amount ? "Valid Amount "
+                : "Invalid Amount Entered")
+
+        }
+
+
+        function setStatus(message) {
+            status = message;
+        }
+
+        function fnSetTimeOut(){
+            date = new Date(); 
+            hours = date.getHours(); 
+            minutes = date.getMinutes(); 
+            seconds = date.getSeconds(); 
+
+            document.getElementById("myTimer").innerHTML = 
+                    hours + " : " + minutes +" : "+ seconds; 
+            setTimeout("fnSetTimeOut()", 1000); 
+        }
+        function fnOpenMyWindow(){
+            var winRef = window.open
+            ("http://google.com", "MyWindow", 
+             "toolbar=no,menubar=no,width=700,height=400,resizable=yes"); 
+        }
+    </script>
+</head>
+<body onload="alert('Page loaded');defaultStatus='Welcome to Page'" onblur="setStatus('you are out of page')"
+    onfocus="setStatus('you are in page')">
+    <button onclick="fnImplicitFunction()">fnImplicitFunction</button><br />
+    <button onclick="fnRegExp()">fnRegExp</button>
+    <button onclick="fnSetTimeOut()">fnSetTimeOut</button>
+    <div id="myTimer" style="background-color: aqua" ></div>
+
+
+    <button onclick="fnOpenMyWindow()">fnOpenMyWindow</button>
+
+</body>
+
+</html>

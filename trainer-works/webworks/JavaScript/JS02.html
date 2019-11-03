@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+        function callme(){
+            var strval = "10"; 
+            var boolval = true; 
+
+            console.log(strval==10)
+            console.log(strval===10)
+
+            console.log(boolval == 1); 
+            console.log(boolval === 1); 
+
+            console.log("-------------------------------------------------------");
+
+            console.log(("hi"/10)== NaN); 
+            if(isNaN(("hi"/10))){
+                console.log("it is not a number");
+            }else{
+                console.log("it is a number");
+
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <button onclick="callme()">Click Me</button>
+</body>
+</html>

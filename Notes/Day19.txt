@@ -1,0 +1,16 @@
+1. Sonarqube on 9000 (http://localhost:9000)
+	default username / password (admin/admin) 
+2. locate the code 
+3. download sonar scanner and put it in env 
+4. create a file called "sonar-project" and below is the content 
+-----------------------------------------------
+sonar.projectKey=MY_SECOND_PRJ_SCNNED
+sonar.projectName=My second project being scanned
+sonar.sourceEncoding=UTF-8
+sonar.sources=src
+sonar.exclusion=
+sonar.java.binaries=bin
+------------------------------------------------
+5. > sonar-scanner <enter> 
+
+

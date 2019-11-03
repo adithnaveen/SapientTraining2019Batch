@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script type="text/javascript">
+        function fnTest() {
+            try {
+                allert("something wrong")
+            } catch (err) {
+                console.log("Function is wrong " + err);
+            }
+        }
+
+        function fnBusinessTest() {
+            var age = parseInt(prompt("Enter Your Age", 10));
+
+            try {
+                if (age > 80) {
+                    throw "err1";
+                } else if (age < 0) {
+                    throw "err2";
+                } else {
+                    console.log("You are on planet earth");
+                }
+            } catch (er) {
+                if (er == "err1") {
+                    console.log("Error, you are too old to live on this planet");
+                } else if (er == "err2") {
+                    console.log("You are eager to come to this planet");
+
+                }
+            }
+        }
+
+        onerror = handleError;
+
+        function handleError(message, url, lineNumber) {
+            console.log("Error Occured");
+            console.log("With Message " + message);
+            console.log("With url " + url);
+            console.log("With line nmber " + lineNumber);
+        }
+    
+        function fnTest1(){
+            aller("some message ")
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="fnTest()">fnTest()</button>
+    <button onclick="fnTest1()">fnTest1()</button>
+    <button onclick="fnBusinessTest()">fnBusinessTest</button>
+</body>
+
+</html>

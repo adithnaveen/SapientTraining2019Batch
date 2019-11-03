@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.3" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="training.jdbc.beans.Employee" project="Bit-JavaWorks" 
+    file="/Bit-JavaWorks/jdbc/training/jdbc/beans/Employee.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="441" width="233" x="337" y="67"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="training.jdbc.client.App" project="Bit-JavaWorks" 
+    file="/Bit-JavaWorks/jdbc/training/jdbc/client/App.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="113" x="130" y="288"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="training.jdbc.connection.GetConnection" project="Bit-JavaWorks" 
+    file="/Bit-JavaWorks/jdbc/training/jdbc/connection/GetConnection.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="192" x="85" y="503"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="training.jdbc.dao.EmployeeDAO" project="Bit-JavaWorks" 
+    file="/Bit-JavaWorks/jdbc/training/jdbc/dao/EmployeeDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="200" x="655" y="544"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" language="java" name="training.jdbc.standards.IEmployeeDAO" project="Bit-JavaWorks" 
+    file="/Bit-JavaWorks/jdbc/training/jdbc/standards/IEmployeeDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="200" x="700" y="163"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <realization id="6">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

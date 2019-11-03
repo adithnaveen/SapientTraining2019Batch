@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:annotation-config />
+	<context:component-scan
+		base-package="training.sapient.di" />
+
+
+	<bean id="hello" class="training.sapient.spring01.HelloService">
+		<property name="name" value="Umang" />
+		<property name="city" value="Bengaluru" />
+	</bean>
+
+	<!-- propertyplaceholderconfigurer -->
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>emp.properties</value>
+		</property>
+	</bean>
+
+
+	<bean id="employee" class="training.sapient.property.Employee">
+		<property name="empId" value="${employee.empid}" />
+		<property name="empName" value="${employee.empname}" />
+		<property name="empSal" value="${employee.empsal}" />
+	</bean>
+
+
+
+
+	<bean id="mobile" class="training.sapient.di.Mobile"
+		autowire="byName" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>
+
