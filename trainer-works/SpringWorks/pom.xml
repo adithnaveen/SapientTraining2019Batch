@@ -8,7 +8,7 @@
 
 
 	<properties>
-		<spring.version>4.0.5.RELEASE</spring.version>
+		<spring.version>5.3.18</spring.version>
 		<springbatch.version>3.0.1.RELEASE</springbatch.version>
 		<mysql.connector.version>5.1.31</mysql.connector.version>
 		<joda-time.version>2.3</joda-time.version>
